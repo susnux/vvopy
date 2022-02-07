@@ -77,12 +77,12 @@ class Departure:
     @property
     def delay(self):
         if self.real_time:
-            return (self.real_time - self.scheduled).total_seconds()
+            return int((self.real_time - self.scheduled).total_seconds())
         return 0
 
     @property
     def departure(self):
-        return (self.scheduled - datetime.now()).total_seconds() + self.delay
+        return int((self.scheduled - datetime.now()).total_seconds() + self.delay)
 
 
 class DepartureResponse(Response):

@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional, Union
-from RacingTeam.api.api_departure import Punctuality, TransportationType
 
-from RacingTeam.api.api_stops import Point
-from RacingTeam.api.base import Response, _do_request, _parse_time
+from .api_departure import Punctuality, TransportationType
+from .api_stops import Point
+from .base import Response, _do_request, _parse_time
 
 
 _ENDPOINT = "/tr/trips"

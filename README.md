@@ -1,2 +1,4 @@
 # vvopy
-Inoffical python binding to the VVO webapi
+(like *vv Opi*, german for vv-grandpa)
+
+Inoffical python binding to the VVO webapi.

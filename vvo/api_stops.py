@@ -9,7 +9,7 @@ class Point:
         (
             self.id,
             self.type,
-            self.city,
+            self.place,
             self.name,
             self.gk4_right,
             self.gk4_up,

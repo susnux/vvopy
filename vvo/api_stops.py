@@ -19,6 +19,8 @@ class Point:
         ) = data.split("|")
         if self.is_stop:
             self.id = int(self.id)
+        if self.distance:
+            self.distance = int(self.distance)
         self.gk4_right = int(self.gk4_right)
         self.gk4_up = int(self.gk4_up)
 

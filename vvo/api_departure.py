@@ -29,6 +29,8 @@ class TransportationType(Enum):
     RAPID_TRANSIT = "RapidTransit"
     """RE 'ReginalExpress'"""
 
+
+    STAY = "StayForConnection"
     FOOTPATH = "Footpath"
     STAIRWAY_UP = "MobilityStairsUp"
     STAIRWAY_DOWN = "MobilityStairsDown"

@@ -41,6 +41,7 @@ class TransportationType(Enum):
 class Punctuality(Enum):
     IN_TIME = "InTime"
     DELAYED = "Delayed"
+    CANCELLED = "Cancelled"
 
 
 class Departure:

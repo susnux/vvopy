@@ -102,14 +102,13 @@ class DepartureResponse(Response):
         super().__init__(data, parameters)
         self.name = data["Name"]
         self.place = data["Place"]
-        self.departures = []
         dd = {}
-        self.more = "limit" in parameters and parameters["limit"] == len(data["Departures"])
         # Filter out duplicates
-        for d in data["Departures"]:
+        for d in data.get("Departures", []):
             dep = Departure(d)
             dd[(dep.id, dep.scheduled)] = dep
         self.departures = list(dd.values())
+        self.more = "limit" in parameters and parameters["limit"] == len(self.departures)
 
 
 def get_departures(stopid: Union[Point, int], **kwargs) -> DepartureResponse:
